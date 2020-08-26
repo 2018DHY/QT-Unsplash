@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QScrollArea>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +18,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QScrollArea *Scroll_Nature;
+    QScrollArea *Scroll_People;
+    QScrollArea *Scroll_Wallpaper;
+    QScrollArea *Scroll_Spirituality;
 };
 #endif // MAINWINDOW_H

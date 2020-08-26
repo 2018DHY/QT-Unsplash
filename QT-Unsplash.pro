@@ -20,6 +20,8 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    MyThread.h \
+    MyWidget.h \
     mainwindow.h
 
 FORMS += \
