@@ -20,11 +20,15 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
+
 private slots:
     void on_Nature_toggled(bool checked);
 
 private:
     Ui::MainWindow *ui;
+    //线程量
+    MyThread thread[10];
     //小窗口缓存量
     MyWidget *Nature_PICTURE[200];
     MyWidget *People_PICTURE[200];

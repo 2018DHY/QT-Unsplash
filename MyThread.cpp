@@ -4,7 +4,15 @@
 
 
 
-MyThread::MyThread(int num,QString FilePath,QString _site)
+MyThread::MyThread()
+{
+
+}
+void  MyThread::getMyWiget(MyWidget *_MyWidget)
+{
+    loadpicture=_MyWidget;
+}
+void MyThread::initi(int num, QString FilePath, QString _site)
 {
     number=num;//线程编号同时也是照片编号
     Folder=FilePath;
@@ -17,16 +25,6 @@ MyThread::MyThread(int num,QString FilePath,QString _site)
     file.append(".jpg");
     cmd=(proxy+"wget "+link+" --output-document="+file);
 }
-void  MyThread::getMyWiget(MyWidget *_MyWidget)
-{
-    loadpicture=_MyWidget;
-}
-
-void MyThread::runthread()
-{
-    run();
-}
-
 
 void MyThread::run()
 {

@@ -6,6 +6,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //连接信号
+
+
+
+
     // 初始化缓存量
      for(int i=0;i<200;i++)
      {
@@ -71,9 +76,10 @@ void MainWindow::on_Nature_toggled(bool checked)
                 Nature_PICTURE[i]->setStyleSheet("background-color:rgb(80,80,80)");
                 Nature_PICTURE[i]->setGeometry(301*Nature_colum,201*Nature_row,300,200);
                 Nature_PICTURE[i]->show();
-                MyThread thread(Nature_sum,Natrue_Folder,site);
-                thread.getMyWiget(Nature_PICTURE[i]);
-                thread.runthread();
+                thread[i].initi(Nature_sum,Natrue_Folder,site);
+                thread[i].getMyWiget(Nature_PICTURE[i]);
+                //thread[i].moveToThread(&thread[i]);
+                thread[i].start();
                 Nature_sum++;
             }
         }

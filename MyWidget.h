@@ -19,7 +19,8 @@ class MyWidget :public QWidget
 
     QPushButton setpicture;
 
-
+    signals:
+    void download();
 
 
 

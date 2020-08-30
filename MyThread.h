@@ -37,9 +37,9 @@ class MyThread :public QThread
 
 
    public:
-        MyThread(int num,QString FilePath,QString _site);
+        MyThread();
+        void initi(int num,QString FilePath,QString _site);
         void getMyWiget(MyWidget *_MyWidget);
-        void runthread();
 
 
 
