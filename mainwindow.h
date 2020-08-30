@@ -5,6 +5,8 @@
 #include <QScrollArea>
 #include <QDir>
 #include <QString>
+#include "MyWidget.h"
+#include "MyThread.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,8 +20,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_Nature_toggled(bool checked);
+
 private:
     Ui::MainWindow *ui;
+    //小窗口缓存量
+    MyWidget *Nature_PICTURE[200];
+    MyWidget *People_PICTURE[200];
+    MyWidget *Wallpaper_PICTURE[200];
+    MyWidget *Spirituality_PICTURE[200];
     //照片分类
     QString site;
     //四大分类滑动窗口

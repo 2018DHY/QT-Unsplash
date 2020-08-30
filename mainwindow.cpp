@@ -6,6 +6,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    // 初始化缓存量
+     for(int i=0;i<200;i++)
+     {
+         Nature_PICTURE[i]=new MyWidget;
+
+     }
+
     //初始化分类
     site="";
     //初始化照片数
@@ -44,3 +51,31 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_Nature_toggled(bool checked)
+{
+    if(checked)
+    {
+        site="Nature";
+        Scroll_People->hide();
+        Scroll_Wallpaper->hide();
+        Scroll_Spirituality->hide();
+        Scroll_Nature->show();
+        if(Nature_sum==0)
+        {
+            for(int i=0;i<2;i++)
+            {
+                Nature_row=Nature_sum/4;
+                Nature_colum=Nature_sum%4;
+                Nature_PICTURE[i]->setParent(Scroll_Nature);
+                Nature_PICTURE[i]->setStyleSheet("background-color:rgb(80,80,80)");
+                Nature_PICTURE[i]->setGeometry(301*Nature_colum,201*Nature_row,300,200);
+                Nature_PICTURE[i]->show();
+                MyThread thread(Nature_sum,Natrue_Folder,site);
+                thread.getMyWiget(Nature_PICTURE[i]);
+                thread.runthread();
+                Nature_sum++;
+            }
+        }
+    }
+}

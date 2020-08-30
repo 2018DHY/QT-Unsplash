@@ -2,7 +2,7 @@
 #define MYTHREAD_H
 #include <QThread>
 #include <QString>
-#include <QtWidgets>
+#include "MyWidget.h"
 class MyThread :public QThread
 {
 
@@ -18,7 +18,7 @@ class MyThread :public QThread
     QString link;
     QString site;
     QString file;
-    QWidget *loadpicture;
+    MyWidget *loadpicture;
     QPixmap pixmap;
     QPixmap pix;
 
@@ -38,7 +38,8 @@ class MyThread :public QThread
 
    public:
         MyThread(int num,QString FilePath,QString _site);
-        void getMyWiget(QWidget *_MyWidget);
+        void getMyWiget(MyWidget *_MyWidget);
+        void runthread();
 
 
 

@@ -17,9 +17,24 @@ MyThread::MyThread(int num,QString FilePath,QString _site)
     file.append(".jpg");
     cmd=(proxy+"wget "+link+" --output-document="+file);
 }
+void  MyThread::getMyWiget(MyWidget *_MyWidget)
+{
+    loadpicture=_MyWidget;
+}
+
+void MyThread::runthread()
+{
+    run();
+}
 
 
 void MyThread::run()
 {
     system(proxy.toLatin1()+cmd.toLatin1());
+    pixmap.load(file);
+    pix=pixmap.scaled(300,200);
+    loadpicture->picture.setGeometry(0,0,300,200);
+    loadpicture->picture.setPixmap(pix);
+    loadpicture->picture.setParent(loadpicture);
+    loadpicture->picture.show();
 }

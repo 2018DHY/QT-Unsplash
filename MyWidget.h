@@ -4,10 +4,10 @@
 #include <QPushButton>
 #include <QLabel>
 #include <QString>
-#include <MyThread.h>
 class MyWidget :public QWidget
 {
     public:
+    QLabel picture;
     MyWidget();
 
 
@@ -16,9 +16,9 @@ class MyWidget :public QWidget
 
 
     private:
-    QLabel picture;
+
     QPushButton setpicture;
-    MyThread *getpicture;
+
 
 
 
