@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>QT-Unsplash</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="verticalLayoutWidget">
@@ -33,16 +33,40 @@
      <property name="spacing">
       <number>6</number>
      </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
      <property name="bottomMargin">
       <number>0</number>
      </property>
      <item>
       <widget class="QRadioButton" name="Nature">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="maximumSize">
         <size>
          <width>35</width>
          <height>268</height>
         </size>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton:checked{background-color:rgb(41, 128, 249)}
+QRadioButton::indicator{width:9px;height:0px;background-color:rgba(0,0,0,0)}
+QRadioButton:hover{background-color:rgb(41, 128, 249)}
+</string>
        </property>
        <property name="text">
         <string>N
@@ -51,6 +75,9 @@ T
 U
 R
 E</string>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -67,6 +94,12 @@ E</string>
          <width>35</width>
          <height>268</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton:checked{background-color:rgb(41, 128, 249)}
+QRadioButton::indicator{width:9px;height:0px;background-color:rgba(0,0,0,0)}
+QRadioButton:hover{background-color:rgb(41, 128, 249)}
+</string>
        </property>
        <property name="text">
         <string>P
@@ -91,6 +124,12 @@ E</string>
          <width>35</width>
          <height>268</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton:checked{background-color:rgb(41, 128, 249)}
+QRadioButton::indicator{width:9px;height:0px;background-color:rgba(0,0,0,0)}
+QRadioButton:hover{background-color:rgb(41, 128, 249)}
+</string>
        </property>
        <property name="text">
         <string>W
@@ -118,6 +157,12 @@ R
        </property>
        <property name="focusPolicy">
         <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton:checked{background-color:rgb(41, 128, 249)}
+QRadioButton::indicator{width:9px;height:0px;background-color:rgba(0,0,0,0)}
+QRadioButton:hover{background-color:rgb(41, 128, 249)}
+</string>
        </property>
        <property name="text">
         <string>S

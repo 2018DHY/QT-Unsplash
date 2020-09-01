@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
     //连接信号
 
 
@@ -73,6 +75,7 @@ void MainWindow::on_Nature_toggled(bool checked)
                 Nature_row=Nature_sum/4;
                 Nature_colum=Nature_sum%4;
                 Nature_PICTURE[i]->setParent(Scroll_Nature);
+                Nature_PICTURE[i]->initi(Nature_sum,Natrue_Folder);
                 Nature_PICTURE[i]->setStyleSheet("background-color:rgb(80,80,80)");
                 Nature_PICTURE[i]->setGeometry(301*Nature_colum,201*Nature_row,300,200);
                 Nature_PICTURE[i]->show();

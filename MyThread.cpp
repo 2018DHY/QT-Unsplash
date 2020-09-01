@@ -34,5 +34,6 @@ void MyThread::run()
     loadpicture->picture.setGeometry(0,0,300,200);
     loadpicture->picture.setPixmap(pix);
     loadpicture->picture.setParent(loadpicture);
+    loadpicture->picture.lower();
     loadpicture->picture.show();
 }
