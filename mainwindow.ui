@@ -63,9 +63,9 @@
         <bool>false</bool>
        </property>
        <property name="styleSheet">
-        <string notr="true">QRadioButton:checked{background-color:rgb(41, 128, 249)}
+        <string notr="true">QRadioButton:checked{background-color:rgb(21, 163, 3);}
 QRadioButton::indicator{width:9px;height:0px;background-color:rgba(0,0,0,0)}
-QRadioButton:hover{background-color:rgb(41, 128, 249)}
+QRadioButton:hover{background-color:rgb(21, 163, 3)}
 </string>
        </property>
        <property name="text">
@@ -96,9 +96,10 @@ E</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">QRadioButton:checked{background-color:rgb(41, 128, 249)}
+        <string notr="true">QRadioButton:checked{background-color: rgb(181, 0, 21);}
 QRadioButton::indicator{width:9px;height:0px;background-color:rgba(0,0,0,0)}
-QRadioButton:hover{background-color:rgb(41, 128, 249)}
+QRadioButton:hover{background-color: rgb(181, 0, 21);}
+
 </string>
        </property>
        <property name="text">
@@ -126,9 +127,9 @@ E</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">QRadioButton:checked{background-color:rgb(41, 128, 249)}
+        <string notr="true">QRadioButton:checked{background-color:rgb(88, 24, 117)}
 QRadioButton::indicator{width:9px;height:0px;background-color:rgba(0,0,0,0)}
-QRadioButton:hover{background-color:rgb(41, 128, 249)}
+QRadioButton:hover{background-color:rgb(88, 24, 117)}
 </string>
        </property>
        <property name="text">
@@ -180,6 +181,19 @@ Y
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>390</y>
+      <width>161</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>点我啊，哈哈哈</string>
+    </property>
    </widget>
   </widget>
  </widget>
